@@ -1,6 +1,6 @@
 {
   "name": "terminal_cli",
-  "version": "1.0.0",
+  "version": "1.0.01",
   "description": "A CLI tool to easily configure KKiaPay Pos Terminal.",
   "main": "bin/index.js",
   "scripts": {
@@ -15,7 +15,6 @@
   "author": "Shegun Montcho",
   "license": "ISC",
   "dependencies": {
-    "boxen": "^4.2.0",
     "chalk": "^4.1.1",
     "figlet": "^1.7.0",
     "yargs": "^17.7.2"

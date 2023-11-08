@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="images/terminal.jpg" height="220" width"700">
- </p>
  <p align="center">
    <img  src="https://img.shields.io/badge/license-MIT-green">
  <img  src="https://img.shields.io/badge/build-passing-brightgreen">
