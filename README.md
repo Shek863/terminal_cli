@@ -44,9 +44,7 @@ Options:
 
 ## Installation
 
-1. Clone the repository and then navigate to it.
-2. Run ```npm install``` to install the dependencies.
-3. Run ```npm install -g .``` to install the CLI. <br>
+1. Run ```npm install -g terminal_cli``` to install the CLI. <br>
 
 > :warning: **This might cause an error** which can be resolved easily by using ```sudo``` with the command, **however**, using ```sudo``` with ```npm``` is **not recommended** because it might cause permission issues later. So instead put the code below in your .bashrc file and then run the above command again.
 ```
@@ -54,7 +52,8 @@ npm set prefix ~/.npm
 PATH="$HOME/.npm/bin:$PATH"
 PATH="./node_modules/.bin:$PATH"
 ```
-4. Now you are good to go and can use the CLI globally!
+
+2. Now you are good to go and can use the CLI globally!
 
 Type ```terminal``` or ```terminal --help``` to get started.
 
