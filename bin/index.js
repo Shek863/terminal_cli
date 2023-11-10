@@ -127,7 +127,7 @@ if(argv.build != null || argv.b != null){
 
             if(pricing != "tpe" && pricing != "free")
             {
-                console.log(`not found`);
+                console.log(`cmd not found`);
                 return
             }
 
@@ -137,12 +137,12 @@ if(argv.build != null || argv.b != null){
                 return
             }
 
-            ////////
             //////////////
             ///********* Install apks */
             ///**************** */
             console.log(`start installation`);
             exec("adb install -r --user 0 launcher.apk; adb install -r --user 0 kkiapay_pos.apk", (error, stdout, stderr) => {
+                
                 if (error) {
                     console.error(error);
                     return;
@@ -151,6 +151,22 @@ if(argv.build != null || argv.b != null){
                     console.log(`stderr: ${stderr}`);
                 }
                 console.log(`Install : success`);
+
+                //////////////
+                ///*********  set-home-activity */
+                ///**************** */
+                console.log(`set tpe_launcher as home activity`);
+                exec("adb shell cmd package set-home-activity co.opensi.tpe_launcher/co.opensi.tpe_launcher.MainActivity", (error, stdout, stderr) => {
+                    if (error) {
+                        console.error(error);
+                        return;
+                    }
+                    if (stderr) {
+                        console.log(`stderr: ${stderr}`);
+                    }
+                    console.log(`home-activity set successfuly`);
+                });
+
             });
 
 }
